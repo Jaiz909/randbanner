@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='randbanner',
-      version='1.0',
+      version='1.0.1',
       description='Random banner generator with colour support.',
       author='Jai Grimshaw',
       url='https://github.com/Jaiz909/randbanner/',
