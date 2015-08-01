@@ -7,13 +7,12 @@
  MMMM   "W" YMM   ""` MMM     YM  MMMMP"`  ""YUMMMP"  YMM   ""` MMM     YM  MMM     YM """"YUMMMMMMM   "W" 
 ```
 
-Randbanner is a simple script to generate banners. Just copy randbanner to your path (`~/bin` is good), then add a call to the bottom of your `~/.bashrc` or `~/.zshrc` and enjoy.
+Randbanner is a simple script to generate banners. Just copy randbanner to your path (`~/bin` is good), then add a call to the bottom of your `~/.bashrc` or `~/.zshrc`, or run `python setup.py install` and enjoy.
 
 If you just run `randbanner` your username will be printed in a random font and colour.
 
 ## Installation
-* Install the requirements with `pip install -r requirements.txt`
-* Copy `randbanner` to your path. `~/bin` is a good spot.
+* Run `python setup.py install` as root to install system wide.
 
 ## Usage
 ```
