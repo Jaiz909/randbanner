@@ -13,6 +13,7 @@ If you just run `randbanner` your username will be printed in a random font and 
 
 ## Installation
 * Run `python setup.py install` as root to install system wide.
+* Run `python setup.py install --user` to install for the current user only. Ensure `$HOME/.local/bin` is in your path.
 
 ## Usage
 ```
