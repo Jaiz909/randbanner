@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='randbanner',
-      version='1.0.1',
+      version='1.1.0',
       description='Random banner generator with colour support.',
       author='Jai Grimshaw',
       url='https://github.com/Jaiz909/randbanner/',
@@ -11,4 +11,9 @@ setup(name='randbanner',
           'clint',
           'pyfiglet',
       ],
-      scripts=['bin/randbanner'])
+      packages=['randbanner'],
+      entry_points={
+         'console_scripts': [
+         'randbanner = randbanner:main',
+         ],
+      },)
