@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='randbanner',
       version='1.1.0',
@@ -11,9 +11,9 @@ setup(name='randbanner',
           'clint',
           'pyfiglet',
       ],
-      packages=['randbanner'],
+      packages=find_packages(),
       entry_points={
          'console_scripts': [
-         'randbanner = randbanner:main',
+         'randbanner = randbanner.randbanner:main',
          ],
       },)

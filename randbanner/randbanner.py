@@ -2,6 +2,7 @@
 __author__ = 'Jai Grimshaw'
 import argparse
 import os
+import sys
 from pyfiglet import Figlet
 from clint.textui import colored, puts
 from random import choice
@@ -9,20 +10,20 @@ from random import choice
 # Big list of cool fonts, hand curated from pyfiglet's extensive library.
 font_list = ['stellar', 'puffy', 'diamond', 'smslant', 'rounded', 'alligator',
              'fender', 'colossal', 'sansb', 'bigchief', 'sblood',
-	     'cybermedium', 'gothic', 'roman', 'os2', 'r2-d2___', 'standard',
-	     'double', 'banner3', 'com_sen_', 'peaks', 'mirror', 'timesofl',
-	     'univers', 'banner3-D', 'isometric1', 'smisome1', 'letters',
-	     '5lineoblique', 'eftiwater', 'script', 'fourtops', 'threepoint',
-	     'larry3d', 'slscript', 'starwars', 'barbwire', 'bulbhead',
-	     'cosmic', 'nipples', 'gradient', 'rowancap', 'thin', 'smscript',
-	     'cosmike', 'computer', 'straight', 'usaflag', 'o8', 'lockergnome',
-	     'pepper', 'serifcap', 'contessa', 'weird', 'catwalk', 'pebbles',
-	     'eftirobot', 'shadow', 'chunky', 'graffiti', 'tanja',
-	     'cyberlarge', 'drpepper', 'alligator2', 'stacey', 'poison',
-	     'smshadow', 'speed', 'epic', 'cybersmall', 'ogre', 'cricket',
-	     'whimsy', 'crawford', 'trek', 'gothic', 'contrast', 'thick',
-	     'marquee', 'rectangles', 'tombstone', 'ticksslant', 'coinstak',
-	     'lean', '3-d', 'bell', 'jazmine']
+             'cybermedium', 'gothic', 'roman', 'os2', 'r2-d2___', 'standard',
+             'double', 'banner3', 'com_sen_', 'peaks', 'mirror', 'timesofl',
+             'univers', 'banner3-D', 'isometric1', 'smisome1', 'letters',
+             '5lineoblique', 'eftiwater', 'script', 'fourtops', 'threepoint',
+             'larry3d', 'slscript', 'starwars', 'barbwire', 'bulbhead',
+             'cosmic', 'nipples', 'gradient', 'rowancap', 'thin', 'smscript',
+             'cosmike', 'computer', 'straight', 'usaflag', 'o8', 'lockergnome',
+             'pepper', 'serifcap', 'contessa', 'weird', 'catwalk', 'pebbles',
+             'eftirobot', 'shadow', 'chunky', 'graffiti', 'tanja',
+             'cyberlarge', 'drpepper', 'alligator2', 'stacey', 'poison',
+             'smshadow', 'speed', 'epic', 'cybersmall', 'ogre', 'cricket',
+             'whimsy', 'crawford', 'trek', 'gothic', 'contrast', 'thick',
+             'marquee', 'rectangles', 'tombstone', 'ticksslant', 'coinstak',
+             'lean', '3-d', 'bell', 'jazmine']
 
 colours = [colored.blue, colored.green,
            colored.magenta, colored.red, colored.yellow]
