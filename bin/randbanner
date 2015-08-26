@@ -2,6 +2,7 @@
 __author__ = 'Jai Grimshaw'
 import argparse
 import os
+import sys
 from pyfiglet import Figlet
 from clint.textui import colored, puts
 from random import choice
@@ -25,14 +26,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--all', '-a', action='store_true',
                         dest='display_all', help='Display all fonts')
-    parser.add_argument('-t', '--text', dest='text',
-                        default=os.getenv('USER', default='me'), help='Text to display')
+    parser.add_argument('-t', '--text', dest='text', help='Text to display')
     args = parser.parse_args()
+
+    if args.text:
+        text = args.text
+    else:
+        text = sys.stdin.read()
+
     if args.display_all:
         for font in font_list:
             colour = choice(colours)
-            display_text(args.text, font, colour)
+            display_text(text, font, colour)
     else:
         font = choice(font_list)
         colour = choice(colours)
-        display_text(args.text, font, colour)
+        display_text(text, font, colour)
