@@ -40,18 +40,27 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--all', '-a', action='store_true',
                         dest='display_all', help='Display all fonts')
-    parser.add_argument('-t', '--text', dest='text',
-                        default=os.getenv('USER', default='me'), help='Text to display')
+    parser.add_argument('-t', '--text', dest='text', help='Text to display')
     args = parser.parse_args()
     bold = choice(bold_options)
+
+    if args.text:
+        text = args.text
+    elif not sys.stdin.isatty():
+        #If the user is piping stuff in, read it
+        text = sys.stdin.read()
+    else:
+        # If the user isn't piping, display their username
+        text = os.getenv('USER', default='nobody')
+
     if args.display_all:
         for font in font_list:
             colour = choice(colours)
-            puts(make_banner(args.text, font, colour, bold))
+            display_text(text, font, colour, False)
     else:
         font = choice(font_list)
         colour = choice(colours)
-        puts(make_banner(args.text, font, colour, bold))
+        puts(make_banner(text, font, colour, bold))
 
 if __name__ == '__main__':
    main()
