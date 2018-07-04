@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='randbanner',
-      version='1.1.0',
+      version='2.0.0',
       description='Random banner generator with colour support.',
       author='Jai Grimshaw',
       url='https://github.com/Jaiz909/randbanner/',
@@ -14,6 +14,6 @@ setup(name='randbanner',
       packages=find_packages(),
       entry_points={
          'console_scripts': [
-         'randbanner = randbanner.randbanner:main',
+         'randbanner = randbanner:main',
          ],
       },)
